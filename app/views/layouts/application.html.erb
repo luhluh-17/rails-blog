@@ -10,6 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= yield %>
+    <%= render 'layouts/navbar' %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

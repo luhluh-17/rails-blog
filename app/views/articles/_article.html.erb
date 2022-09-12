@@ -1,12 +1,5 @@
 <div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= article.body %>
-  </p>
-
+  <h3><%= article.title %></h3>
+  <h6><%= format_date(article.created_at) %></h6>
+  <p><%= article.body %></p>
 </div>
