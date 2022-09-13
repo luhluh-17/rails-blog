@@ -1,6 +1,6 @@
 <div id="<%= dom_id article %>" class="article-container">
   <h6 class="article-secondary-text">
-    <%= "#{readable_date_formatter(article.created_at)} by #{article.author}" %>
+    <%= "#{readable_date_formatter(article.created_at)} by #{check_author(article.author)}" %>
   </h6>
   <div class="article-body">
     <div class="article-content">
@@ -27,6 +27,6 @@
         </div>
       </div>
     </div>
-    <img src="<%= article.image_url %>" class="article-image">
+    <img src="<%= check_image(article.image_url) %>" class="article-image">
   </div>
 </div>
