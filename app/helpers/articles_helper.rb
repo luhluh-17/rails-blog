@@ -4,7 +4,7 @@ module ArticlesHelper
   end
 
   def trim_content(content)
-    content.length <= 500 ? content : "#{content[0..500]}..."
+    content.length <= 500 ? content : "#{content[0..500].strip}..."
   end
 
   def words_to_time(content)
