@@ -1,22 +1,32 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <%= article.content %>
-  </p>
-
-  <p>
-    <strong>Image url:</strong>
-    <%= article.image_url %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= article.author %>
-  </p>
-
+<div id="<%= dom_id article %>" class="article-container">
+  <h6 class="article-secondary-text">
+    <%= "#{readable_date_formatter(article.created_at)} by #{article.author}" %>
+  </h6>
+  <div class="article-body">
+    <div class="article-content">
+      <h5>
+        <%= article.title %>
+      </h5>
+      <p>
+        <%= trim_content(article.content) %>
+      </p>
+      <div class="article-footer">
+        <p class="article-tag">
+          <%= words_to_time(article.content) %>
+        </p>
+        <div class="article-button-container">
+          <span class="material-symbols-outlined">
+            favorite
+          </span>
+          <span class="material-symbols-outlined">
+            comment
+          </span>
+          <span class="material-symbols-outlined">
+            share
+          </span>
+        </div>
+      </div>
+    </div>
+    <img src="<%= article.image_url %>" class="article-image">
+  </div>
 </div>
