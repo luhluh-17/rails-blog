@@ -154,6 +154,7 @@ ul {
   transition: var(--transition);
   text-transform: capitalize;
   display: inline-block;
+  font-size: small;
 }
 .btn:hover {
   background: var(--primary-700);
@@ -161,8 +162,10 @@ ul {
   text-decoration: none;
 }
 .btn-hipster {
+  border: 1px solid var(--primary-500);
   color: var(--primary-500);
-  background: var(--primary-200);
+
+  background: transparent;
 }
 .btn-hipster:hover {
   color: var(--primary-200);
@@ -258,6 +261,8 @@ ul {
 .navbar {
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -265,6 +270,10 @@ ul {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   letter-spacing: 0;
+}
+
+.navbar-brand:hover {
+  text-decoration: none;
 }
 
 .articles-container {

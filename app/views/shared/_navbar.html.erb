@@ -1,6 +1,6 @@
 <nav class="navbar">
-  <div>
-    <h4 class="navbar-brand">LuhLuhDev Blog</h4>
-    <%= link_to "New blog", new_blog_path %>
-  </div>
+  <h4><%= link_to "LuhLuhDev Blog", root_path, class: "navbar-brand" %></h4>
+  <% if current_page?(root_url) %>
+    <%= link_to "Create Article", new_blog_path, class: "btn btn-hipster" %>
+  <% end %>
 </nav>
