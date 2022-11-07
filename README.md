@@ -1,8 +1,8 @@
 # LuhLuhDev Blog
-A simple blog app made with Rails 7
+A simple blog application made with Ruby on Rails 7
 
 ### 💻 Features:
-* Create, Read, Update and Delete functions for Blog Model
+* Create, Read, Update and Delete functions
 * List all article in recent order
 * Use built-in date methods to display the displacement between time
 * Use helper functions to calculate the needed time to read article
