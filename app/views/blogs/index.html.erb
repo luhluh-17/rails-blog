@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Blogs</h1>
-
-<div id="blogs">
-  <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New blog", new_blog_path %>
+<main>
+  <p style="color: green"><%= notice %></p>
+  <div id="blogs" class="articles-container">
+    <% @blogs.each do |blog| %>
+      <div id="<%= dom_id blog %>" class="article-container">
+        <div class="article-title-container">
+          <h3><%= link_to blog.title, blog, class: "article-title" %></h1>
+          <h6 class="article-time"><%= "#{distance_of_time_in_words(blog.created_at, Time.now)} ago"  %></h6>
+        </div>
+        <div class="article-preview-container">
+          <p><%= blog.summary %></p>
+          <h5 class="article-link"><%= link_to "Read More", blog %></h5>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>
