@@ -1,10 +1,10 @@
 <% if flash[:notice] %>
-  <h6 class="alert " role="alert">
+  <h5 class="alert alert-success" role="alert">
     <%= flash[:notice] %>
-  </h6>
+  </h5>
 <% end %>
 <% if flash[:alert] %>
-  <h6 role="alert">
+  <h5 class="alert alert-danger" role="alert">
     <%= flash[:alert] %>
-  </h6>
+  </h5>
 <% end %>
