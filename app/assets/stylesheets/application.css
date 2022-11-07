@@ -243,9 +243,11 @@ ul {
   border-radius: var(--borderRadius);
   background: var(--white);
   border: 1px solid var(--grey-200);
+  outline: none;
 }
 .form-textarea-title {
   font-size: medium;
+  height: 2rem;
   padding: 0 1rem;
 }
 .form-textarea-summary {
@@ -255,6 +257,9 @@ ul {
 .form-textarea-content {
   height: 10rem;
   font-size: large;
+}
+.form-error {
+  color: red;
 }
 
 ::placeholder {
@@ -272,6 +277,11 @@ ul {
   display: flex;
   justify-content: end;
 }
+
+input:focus {
+  outline: none;
+}
+
 /* title */
 
 .title {
