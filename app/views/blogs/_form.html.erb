@@ -1,32 +1,29 @@
-<%= form_with(model: blog) do |form| %>
-  <% if blog.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
-
-      <ul>
-        <% blog.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div>
+  <%= form_with(model: blog) do |form| %>
+    <% if blog.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+        <ul>
+          <% blog.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="textfield-container">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-textarea-title" %>
+    </div>
+    <div class="textfield-container">
+      <%= form.label :summary, class: "form-label"  %>
+      <%= form.text_area :summary, class: "form-textarea form-textarea-summary" %>
+    </div>
+    <div class="textfield-container">
+      <%= form.label :content, class: "form-label"  %>
+      <%= form.text_area :content, class: "form-textarea form-textarea-content" %>
+    </div>
+    <div class="submit-container">
+      <%= form.submit class: "btn" %>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :summary, style: "display: block" %>
-    <%= form.text_area :summary %>
-  </div>
-
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</main>
