@@ -1,11 +1,13 @@
 <main>
-  <p style="color: green"><%= notice %></p>
   <div id="blogs" class="articles-container">
     <% @blogs.each do |blog| %>
       <div id="<%= dom_id blog %>" class="article-container">
         <div class="article-title-container">
-          <h3><%= link_to blog.title, blog, class: "article-title" %></h1>
-          <h6 class="article-time"><%= "#{distance_of_time_in_words(blog.created_at, Time.now)} ago"  %></h6>
+          <h6 class= "article-minute-read" ><%= words_to_time(blog.content) %></h6>
+          <h3><%= link_to blog.title, blog, class: "article-title" %></h3>
+          <h6 class="article-time">
+            <%= custom_distance_of_time(blog.created_at) %>
+          </h6>
         </div>
         <div class="article-preview-container">
           <p><%= blog.summary %></p>
