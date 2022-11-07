@@ -1,8 +1,10 @@
 <main>
   <div id="<%= dom_id @blog %>" class="article-container">
     <div class="article-button-container">
-      <%= link_to "Edit", edit_blog_path(@blog), class: "btn" %>
-      <%= link_to "Delete", @blog, method: :delete, class: "btn btn-danger" %>
+      <button class="btn">
+        <%= link_to "Edit", edit_blog_path(@blog), class: "btn-primary-anchor" %>
+      </button>
+      <%= button_to "Delete", @blog, method: :delete, class: "btn btn-danger" %>
     </div>
     <div class="article-title-container">
       <h6 class= "article-minute-read" ><%= words_to_time(@blog.content) %></h6>
