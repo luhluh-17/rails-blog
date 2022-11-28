@@ -2,10 +2,12 @@
 A simple blog application made with Ruby on Rails 7
 
 ### 💻 Features:
-* Create, Read, Update and Delete functions
-* List all article in recent order
-* Use built-in date methods to display the displacement between time
-* Use helper functions to calculate the needed time to read article
+* Created a MVC Architecture application that uses the basic CRUD functions.
+* Display all the articles by the recent order in the ActionView.
+* Added a feature to display the distance of time in words from the article posting to the current time in the ActionView using the built-in DateHelper methods.
+* Added a helper function to convert and display the default timestamps of the model in a human-readable format.
+* Added a helper function to calculate the needed time to read the article in the BlogHelper module.
+
 
 ### 🚀 Live Demo
 https://rails-devblog.fly.dev/
