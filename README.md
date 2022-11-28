@@ -8,7 +8,7 @@ A simple blog application made with Ruby on Rails 7
 * Use helper functions to calculate the needed time to read article
 
 ### 🚀 Live Demo
-https://luhluhdev-blog.herokuapp.com/
+https://rails-devblog.fly.dev/
 
 ### 👨🏽‍💻 Tech Stacks
 
